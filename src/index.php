@@ -31,7 +31,7 @@ $error=false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['int'])) {
 
     $input=$_POST['int'];
-    if(is_numeric($input) && floor( $input ) == $input){
+    if(is_numeric($input) && floor( $input ) == $input && $input>=0){
         $output = romannumerals($input);
         if( $input === "0") {
         $output = "N";
@@ -144,7 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['int'])) {
         <?php if(! isset($output)) :?>
             <p class="roman">Waiting for input...</p> 
         <?php else :?>
-            <p class="roman"><?= $output ?></p>
+            <p class="roman"><?= $input . " = " . $output ?></p>
         <?php endif ; ?>
     </div>
 </body>
