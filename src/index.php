@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be amazed!</title>
     <link rel="stylesheet" href="style.css">
-    <script src="mobileview.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="images">
