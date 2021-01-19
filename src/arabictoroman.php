@@ -33,7 +33,7 @@ $error=false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['int'])) {
     $input=trim($_POST['int']);
     //Validates input, if it's a positive whole number, it turns it into a roman number
-    if(is_numeric($input) && floor($input) == $input && $input >= 0){
+    if(is_numeric($input) && floor($input) == $input && $input >= 0 && $input < 5000){
         $output = romannumerals($input);
         if( $input === "0") {
             //in case the number is a string 0 it sets output to roman N
