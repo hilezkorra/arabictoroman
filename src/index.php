@@ -18,7 +18,7 @@
     </div>
     <div class="input">
         <form action="index.php" method="post">
-            <label for="int">Input a positiv whole number to be converted to Roman numerals:</label>
+            <label for="int">Input a positiv whole number(0-4999) to be converted to Roman numerals:</label>
             <input type="text" name="int" id="int">
 
             <!-- If there are problems with the input display an error message -->
