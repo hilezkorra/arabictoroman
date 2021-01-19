@@ -31,14 +31,16 @@ function romannumerals($int){
 }
 $error=false;
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['int'])) {
-//Validates input, and if there are no errors
     $input=trim($_POST['int']);
+    //Validates input, if it's a positive whole number, it turns it into a roman number
     if(is_numeric($input) && floor($input) == $input && $input >= 0){
         $output = romannumerals($input);
         if( $input === "0") {
-        $output = "N";
+            //in case the number is a string 0 it sets output to roman N
+            $output = "N";
         }
-    }else{    
+    }else{
+        //If there was a problem then make "error=true" so that we can inform the user    
         $error=true;
     }
 }
